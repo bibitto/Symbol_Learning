@@ -1,0 +1,14 @@
+import { NetworkType } from 'symbol-sdk';
+import * as dotenv from 'dotenv';
+import * as sym from 'symbol-sdk';
+dotenv.config();
+
+export const networkType = NetworkType.TEST_NET;
+export const privateKey = process.env.PRIVATE_KEY;
+export const pbulicKey = process.env.PUBLIC_KEY;
+export const nodeUrl = process.env.NODE_URL;
+export const networkGenerationHash = process.env.NETWORK_GENERATION_HASH;
+export const account = sym.Account.createFromPrivateKey(privateKey, networkType);
+
+export const imageDataUri =
+  'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAACVklEQVR4nO3avWoVQRiH8d9RkSiIVolaiE1QsZGgF2BjK5YiiqAgViKGXIGWam4iih+9jeglxEJQYpmcoEFBExvzYSz2bCIxiSd7ZmazOg/8mwP7nnlml5ndd5dMJpPJZDKZTCaTyWQymcz/Raum/xzCcfR3fpvBO4xjuYYxJeEgRtFWSK6XNh5ioKYxRqGFEXy3sfjazGFYPVdoUPrwWPfia/OoU6ORtDCmunyZZxp6JYzoXb7MncRj75l+zAo3AXOKRbQxjAonX+ZBUoMe2IFp4SegrSFrwWnh5csMhR7sjtAFcSxCzWi1Y0zAoQg1Sw6HLhhjApYj1IxWO8YETEeoWdIOXTDGBExEqJmidjBamBR+B5gSYRuMtQY8j1D3ibjrS1Bi3Ao3rkcwLNwE3E489iCEehx+qiG3wOvRp2hqVJUf0+CGSElL8Tw/p3vxWcVl39gzvx4DikfaKRuLT+K+1W5xdOpqi59StMXLJsdHvMcbDdrqMpl/gNRrQB9OYhAHsL/z+zd8xQe8xY/E44pGC2dwT7HALfj7FrigeEd4V9Fea+RWuBtXFGez1zvBCdzCnqQGFWnhks1fgFbNFC6mU9k6R/FaePG1eYUjiZy65iw+iS9f5jPOJTHrghtYlE6+zCKuJ/DblGtYkl6+zE/cjG65ARc6A6hLvswSzkd2/YNBxY1L3fJlZnEiqvFv7LT6MdN2yjh2RfRe4XINct3makTvFV7UJNdNXkb0XmGmJrlu8mWrMlVejOyrcEwq9m71gCoTMIr5CsfFZl6DPqPJZLYJvwDw7redBvDtywAAAABJRU5ErkJggg==';
